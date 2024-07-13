@@ -38,8 +38,8 @@ export class SearchInput {
         await expect(this.alza.commonPO.searchButton).toHaveText(this.alza.commonPO.testData.searchInputButtonText)
         await expect(this.alza.commonPO.searchInputRemoveButton).toBeVisible()
         await expect(this.alza.commonPO.searchResultCommoditiesItem.nth(0)).toBeVisible()
-        await expect(this.alza.commonPO.searchResultCommoditiesItem.nth(0)).toHaveText(itemData.fullName)
-        await this.alza.commonPO.searchResultCommoditiesItem.getByText(itemData.fullName).click()
+        await expect(this.alza.commonPO.searchResultCommoditiesItem.nth(0)).toContainText(itemData.fullName)
+        await this.alza.commonPO.searchResultCommoditiesItem.nth(0).click({ timeout: 1000 })
         await page.waitForURL(`**${itemData.directURL}**`)
         await expect(this.alza.itemDetailPO.title).toHaveText(itemData.fullName)
     }

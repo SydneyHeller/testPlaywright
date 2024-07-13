@@ -12,7 +12,8 @@ export class ItemDetail {
     async addViewedItemToCart(page: Page, itemData: TestItemData) {
         //await expect(this.alza.crossPO.itemContainerImage).toHaveAttribute("src", process.env.IMAGE_URL + "/" + itemData.imageFull)
         await expect(this.alza.itemDetailPO.title).toHaveText(itemData.fullName)
-        await this.alza.itemDetailPO.buyButton.click()
+        //await this.alza.itemDetailPO.buyButton.click()
+        await this.alza.itemDetailPO.addItemAndProceedToCart(page)
         await page.waitForURL(`**\/${this.alza.crossPO.testData.crossPageURL}\?**`)
     }
 }

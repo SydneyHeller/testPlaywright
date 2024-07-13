@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { expect, Locator, Page } from "@playwright/test";
 
 export class AlzaItemDetailPO {
     //Main
@@ -13,6 +13,9 @@ export class AlzaItemDetailPO {
     detailTextContainer: Locator
     priceDetailContainer: Locator
     buyButton: Locator
+
+    //dialog
+    dialogButton: Locator
 
 
 
@@ -30,5 +33,15 @@ export class AlzaItemDetailPO {
         //priceContainer
         this.priceDetailContainer = this.detailTextContainer.locator('div.price-detail')
         this.buyButton = this.priceDetailContainer.locator('a.js-buy-button')
+
+        this.dialogButton = page.locator("div.detailDialogsRoot-alz-4").locator("button.MuiButton-root")
+    }
+
+    async addItemAndProceedToCart(page: Page) {
+        await this.buyButton.click()
+        await page.waitForTimeout(500)
+        if (await this.dialogButton.isVisible()) {
+            await this.dialogButton.click()
+        }
     }
 }

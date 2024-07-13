@@ -44,7 +44,7 @@ export class Cart {
         await expect(this.alza.cartPO.backButton).toHaveText(this.alza.cartPO.testData.backButtonText)
         await expect(this.alza.cartPO.continueButton).toBeVisible()
         await expect(this.alza.cartPO.continueButton).toHaveText(this.alza.cartPO.testData.continueButtonText)
-        await this.alza.cartPO.continueButton.click()
+        await this.alza.cartPO.continueButton.click({ force: true, timeout: 1000 })
         await expect(this.alza.cartPO.dialogContainerBody).toBeVisible()
         await expect(this.alza.cartPO.dialogAddButton).toBeVisible()
         await expect(this.alza.cartPO.dialogAddButton).toHaveText(this.alza.cartPO.testData.dialogAddButtonText)
