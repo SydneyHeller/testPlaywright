@@ -1,0 +1,24 @@
+{
+  "name": "alza_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pw.alza.e2e:chromium": "npx playwright test --config=configs/e2e.pwConfig.ts --project=chromium --headed",
+    "pw.alza.functional:chromium": "npx playwright test --config=configs/functional.pwConfig.ts --project=chromium --headed",
+    "pw.alza.e2e:firefox": "npx playwright test --config=configs/e2e.pwConfig.ts --project=firefox --headed",
+    "pw.alza.functional:firefox": "npx playwright test --config=configs/functional.pwConfig.ts --project=firefox --headed",
+    "pw.alza.e2e": "npx playwright test --config=configs/e2e.pwConfig.ts --headed",
+    "pw.alza.functional": "npx playwright test --config=configs/functional.pwConfig.ts --headed",
+    "pw.alza.allTests": "npx playwright test --headed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.13"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
