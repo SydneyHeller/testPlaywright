@@ -12,7 +12,7 @@ export class TypicodeInit {
             method: 'GET',
         })
         const res = await req.json()
-        console.log(res.email)
+        console.log(`For ${userId} is registered email : ${res.email}`)
     }
 
     async verifyPosts(userId) {
