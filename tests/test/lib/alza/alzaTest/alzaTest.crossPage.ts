@@ -1,6 +1,6 @@
 import { Page, expect } from "@playwright/test";
-import { AlzaInit } from "../../../pageObjects/alza/alzaInit";
-import { TestItemData } from "../../../../global";
+import { AlzaInit } from "../../../../pageObjects/alza/alzaInit";
+import { AlzaTestItemData } from "../../../../../global";
 
 export class CrossPage {
     alza: AlzaInit
@@ -9,7 +9,7 @@ export class CrossPage {
         this.alza = new AlzaInit(page);
     }
 
-    async moveToTheCart(page: Page, itemData: TestItemData) {
+    async moveToTheCart(page: Page, itemData: AlzaTestItemData) {
         //await expect(this.alza.crossPO.itemContainerImage).toHaveAttribute("src", process.env.IMAGE_URL + "/" + itemData.imageFull)
         await expect(this.alza.crossPO.itemContainerInfoMessage).toBeVisible()
         await expect(this.alza.crossPO.itemContainerInfoMessage).toHaveText(this.alza.crossPO.testData.itemContainerInfoMessageText)

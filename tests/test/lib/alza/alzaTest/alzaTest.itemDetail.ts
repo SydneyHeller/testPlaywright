@@ -1,6 +1,6 @@
 import { Page, expect } from "@playwright/test";
-import { AlzaInit } from "../../../pageObjects/alza/alzaInit";
-import { TestItemData } from "../../../../global";
+import { AlzaInit } from "../../../../pageObjects/alza/alzaInit";
+import { AlzaTestItemData } from "../../../../../global";
 
 export class ItemDetail {
     alza: AlzaInit
@@ -9,7 +9,7 @@ export class ItemDetail {
         this.alza = new AlzaInit(page);
     }
 
-    async addViewedItemToCart(page: Page, itemData: TestItemData) {
+    async addViewedItemToCart(page: Page, itemData: AlzaTestItemData) {
         //await expect(this.alza.crossPO.itemContainerImage).toHaveAttribute("src", process.env.IMAGE_URL + "/" + itemData.imageFull)
         await expect(this.alza.itemDetailPO.title).toHaveText(itemData.fullName)
         //await this.alza.itemDetailPO.buyButton.click()

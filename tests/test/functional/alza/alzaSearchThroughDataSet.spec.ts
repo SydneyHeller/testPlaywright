@@ -1,6 +1,6 @@
 import { Page, test } from "@playwright/test";
-import { AlzaInit, TestItemArray } from "../../pageObjects/alza/alzaInit";
-import { AlzaTest } from "../lib/alzaTest";
+import { AlzaInit, TestItemArray } from "../../../pageObjects/alza/alzaInit";
+import { AlzaTest } from "../../lib/alza/alzaTest";
 
 
 test.describe("Run through data set", () => {

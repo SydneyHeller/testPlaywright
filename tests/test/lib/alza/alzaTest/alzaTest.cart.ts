@@ -1,6 +1,6 @@
-import { Page, expect, test } from "@playwright/test";
-import { AlzaInit } from "../../../pageObjects/alza/alzaInit";
-import { TestItemData } from "../../../../global";
+import { Page, expect } from "@playwright/test";
+import { AlzaInit } from "../../../../pageObjects/alza/alzaInit";
+import { AlzaTestItemData } from "../../../../../global";
 
 export class Cart {
     alza: AlzaInit
@@ -35,7 +35,7 @@ export class Cart {
         await expect(this.alza.cartPO.continueButton).toBeHidden()
     }
 
-    async cartFillProceedToCheckout(page: Page, itemData: TestItemData) {
+    async cartFillProceedToCheckout(page: Page, itemData: AlzaTestItemData) {
         const itemRow = await this.alza.cartPO.getCartItemRow(page, itemData)
 
         await expect((itemRow).locator(this.alza.cartPO.cartItemNameText)).toBeVisible()

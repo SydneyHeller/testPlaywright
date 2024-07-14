@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import { TestItemData } from "../../../../global";
+import { AlzaTestItemData } from "../../../../global";
 
 export class AlzaCartPO {
     //Main
@@ -78,7 +78,7 @@ export class AlzaCartPO {
         dialogAddButtonText: "Přidat vybrané do košíku"
     }
 
-    async getCartItemRow(page: Page, itemData: TestItemData) {
+    async getCartItemRow(page: Page, itemData: AlzaTestItemData) {
         const elementLocator = this.cartItemBlockTable.locator(`tr[data-code="${itemData.code}"]`)
         return elementLocator
     }

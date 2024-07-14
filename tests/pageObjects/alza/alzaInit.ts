@@ -3,13 +3,13 @@ import { AlzaCommonPO } from "./alzaPO/alzaCommon.PO";
 import { AlzaCrossPagePO } from "./alzaPO/alzaCrossPage.PO"
 import { AlzaItemDetailPO } from "./alzaPO/alzaItemDetail.PO";
 
-import { TestItemData } from "../../../global";
+import { AlzaTestItemData } from "../../../global";
 
-import * as testItem1 from "./../../fixtures/items/dualsenseVolcanicRed"
-import * as testItem2 from "./../../fixtures/items/xboxControllerBlue"
-import * as testItem3 from "./../../fixtures/items/quickshotJoystick"
+import * as testItem1 from "../../fixtures/alzaItems/dualsenseVolcanicRed"
+import * as testItem2 from "../../fixtures/alzaItems/xboxControllerBlue"
+import * as testItem3 from "../../fixtures/alzaItems/quickshotJoystick"
 
-export let TestItemArray: Array<TestItemData> = [
+export let TestItemArray: Array<AlzaTestItemData> = [
     testItem1.testItemData,
     testItem2.testItemData,
     testItem3.testItemData

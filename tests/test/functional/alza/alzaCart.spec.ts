@@ -1,6 +1,6 @@
-import { Page, expect, test } from "@playwright/test";
-import { AlzaInit, TestItemArray } from "../../pageObjects/alza/alzaInit";
-import { AlzaTest } from "../lib/alzaTest";
+import { Page, test } from "@playwright/test";
+import { AlzaInit } from "../../../pageObjects/alza/alzaInit";
+import { AlzaTest } from "../../lib/alza/alzaTest";
 
 
 test.describe("Cart and CrossPage", () => {

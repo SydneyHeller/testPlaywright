@@ -1,6 +1,6 @@
-import { Page, expect, test } from "@playwright/test";
-import { AlzaInit } from "../../../pageObjects/alza/alzaInit";
-import { TestItemData } from "../../../../global";
+import { Page, expect } from "@playwright/test";
+import { AlzaInit } from "../../../../pageObjects/alza/alzaInit";
+import { AlzaTestItemData } from "../../../../../global";
 
 export class SearchInput {
     alza: AlzaInit
@@ -24,7 +24,7 @@ export class SearchInput {
      * Test the searchInput after user type item that can be found
      * Test 3 - Search Item -> "View item" detail/page
      */
-    async searchInputSet(page: Page, itemData: TestItemData) {
+    async searchInputSet(page: Page, itemData: AlzaTestItemData) {
         //Check the searchbox without searchItem
         await expect(this.alza.commonPO.searchInput).toHaveAttribute("value", "")
         await expect(this.alza.commonPO.searchInputRemoveButton).toBeHidden()
@@ -48,7 +48,7 @@ export class SearchInput {
  * Test the searchInput after user type item that cannot be Found
  * Example of Test 2 - Search Item -> Item not found
  */
-    async searchInputCannotFound(page: Page, itemData: TestItemData) {
+    async searchInputCannotFound(page: Page, itemData: AlzaTestItemData) {
         //Check the searchbox without searchItem
         await expect(this.alza.commonPO.searchInput).toHaveAttribute("value", "")
         await expect(this.alza.commonPO.searchInputRemoveButton).toBeHidden()
