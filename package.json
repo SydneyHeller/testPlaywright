@@ -10,7 +10,8 @@
     "pw.alza.functional:firefox": "npx playwright test --config=configs/functional.pwConfig.ts --project=firefox --headed",
     "pw.alza.e2e": "npx playwright test --config=configs/e2e.pwConfig.ts --headed",
     "pw.alza.functional": "npx playwright test --config=configs/functional.pwConfig.ts --headed",
-    "pw.alza.allTests": "npx playwright test --headed"
+    "pw.alza.allTests": "npx playwright test --headed",
+    "pw.google": "npx playwright test --config=configs/google.e2e.pwConfig.ts --headed"
   },
   "author": "",
   "license": "ISC",

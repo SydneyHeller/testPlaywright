@@ -7,7 +7,7 @@ export type AlzaTestItemData = {
     imageFull: string
 }
 
-export type GoogleLogin = {
+export type Login = {
     name: string,
     email: string,
     password: string

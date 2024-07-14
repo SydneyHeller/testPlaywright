@@ -1,10 +1,10 @@
 import { PlaywrightTestConfig, devices } from "@playwright/test";
 import { loadEnvFile } from "process";
 
-loadEnvFile("./url.env")
+loadEnvFile("./alza.env")
 
 const stageConfig: PlaywrightTestConfig = {
-    testDir: "../tests/test/e2e/",
+    testDir: "../tests/test/e2e/alza",
     workers: 1,
     projects: [
         {
