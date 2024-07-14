@@ -1,3 +1,5 @@
-//login : helltester
-//email : hellt3st3r@gmail.com
-//pass - helltester-1739
+export const GoogleUserLogin = {
+    name: "helltester",
+    email: "hellt3st3r@gmail.com",
+    password: "helltester-1739"
+}
