@@ -11,7 +11,8 @@
     "pw.alza.e2e": "npx playwright test --config=configs/alza.e2e.pwConfig.ts --headed",
     "pw.alza.functional": "npx playwright test --config=configs/alza.functional.pwConfig.ts --headed",
     "pw.allTests": "npx playwright test --headed",
-    "pw.google": "npx playwright test --config=configs/google.e2e.pwConfig.ts --headed"
+    "pw.google": "npx playwright test --config=configs/google.e2e.pwConfig.ts --headed",
+    "pw.typicode": "npx playwright test --config=configs/typicode.e2e.pwConfig.ts --headed"
   },
   "author": "",
   "license": "ISC",

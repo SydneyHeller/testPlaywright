@@ -1,10 +1,10 @@
 import { PlaywrightTestConfig, devices } from "@playwright/test";
 import { loadEnvFile } from "process";
 
-loadEnvFile("./google.env")
+loadEnvFile("./typicode.env")
 
 const stageConfig: PlaywrightTestConfig = {
-    testDir: "../tests/test/e2e/google",
+    testDir: "../tests/test/e2e/typicode",
     workers: 1,
     projects: [
         {
