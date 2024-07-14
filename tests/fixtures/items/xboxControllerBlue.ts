@@ -1,5 +1,5 @@
 export const testItemData = {
-    name: "xbox controller blue",
+    name: "xbox controller Shock blue",
     fullName: "Xbox Wireless Controller Shock Blue",
     code: "MXO001SC3",
     productNumber: "QAU-00009",

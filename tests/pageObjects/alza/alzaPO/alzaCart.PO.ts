@@ -69,7 +69,7 @@ export class AlzaCartPO {
     testData = {
         emptyCartImageSrc: "Styles/full/images/bg-basket-empty.png",
         emptyCartText: "Jsem tak prázdný...",
-        cartToCatalogHref: "/CatalogPage.aspx",
+        cartToCatalogHref: "/catalog",
         cartToCatalogText: "Zobrazit katalog",
         backButtonText: "Zpět k nákupu",
         continueButtonText: "Pokračovat",
