@@ -13,9 +13,6 @@ export class GoogleLoginPO {
         this.passwordInput = page.locator('input[name="Passwd"]')
         this.footerBlock = page.locator('div.JYXaTc')
         this.buttonNext = this.footerBlock.locator("button").nth(0)
-
-
-
     }
 
     testData = {
