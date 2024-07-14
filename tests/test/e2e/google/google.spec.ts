@@ -1,22 +1,18 @@
 import { Page, expect, test } from "@playwright/test";
 import { GoogleInit, TestLogin } from "../../../pageObjects/google/googleInit";
-import { GoogleTest } from "../../lib/google/googleTest";
 
 test.describe("E2E - Google Mail", () => {
     test.describe.configure({ mode: 'serial' })
     let page: Page
     let google: GoogleInit
-    let googleTest: GoogleTest
-    let emailCount: number
 
     test.beforeAll(async ({ browser }) => {
         page = await browser.newPage()
         google = new GoogleInit(page)
-        googleTest = new GoogleTest(page)
 
         await page.goto(google.loginPO.testData.mainURL)
         await google.loginPO.googleLogin(page, TestLogin[0])
-        emailCount = await google.emailPO.emailTableRow.count()
+        const emailCount = await google.emailPO.emailTableRow.count()
         await google.emailPO.sendGoogleEmail(TestLogin[0])
         await google.emailPO.waitForEmail(page, emailCount)
         await google.emailPO.starNewestUnreadEmail()
